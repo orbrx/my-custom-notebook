@@ -1,61 +1,33 @@
 {
-  "extends": "../../tsconfigbase",
+  "$schema": "http://json.schemastore.org/tsconfig",
   "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "composite": true,
+    "declaration": true,
+    "esModuleInterop": true,
+    "incremental": true,
+    "jsx": "react",
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ES2018",
+      "ES2020.BigInt",
+      "ES2020.Intl",
+      "ES2020.String"
+    ],
+    "module": "esnext",
+    "moduleResolution": "node",
     "outDir": "lib",
-    "rootDir": "src"
+    "rootDir": "src",
+    "target": "ES2018",
+    "sourceMap": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "strictPropertyInitialization": false,
+    "useUnknownInCatchVariables": false
   },
   "include": ["src/*", "src/default.json"],
-  "references": [
-    {
-      "path": "../apputils"
-    },
-    {
-      "path": "../cells"
-    },
-    {
-      "path": "../codeeditor"
-    },
-    {
-      "path": "../codemirror"
-    },
-    {
-      "path": "../coreutils"
-    },
-    {
-      "path": "../docregistry"
-    },
-    {
-      "path": "../documentsearch"
-    },
-    {
-      "path": "../lsp"
-    },
-    {
-      "path": "../nbformat"
-    },
-    {
-      "path": "../observables"
-    },
-    {
-      "path": "../rendermime"
-    },
-    {
-      "path": "../services"
-    },
-    {
-      "path": "../settingregistry"
-    },
-    {
-      "path": "../statusbar"
-    },
-    {
-      "path": "../toc"
-    },
-    {
-      "path": "../translation"
-    },
-    {
-      "path": "../ui-components"
-    }
-  ]
+  "exclude": ["node_modules"]
 }
